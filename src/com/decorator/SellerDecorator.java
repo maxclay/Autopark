@@ -1,6 +1,7 @@
 package com.decorator;
 
-public abstract class SellerDecorator extends Seller{
+
+public abstract class SellerDecorator implements Seller{
 	
 	protected Seller seller;
 	

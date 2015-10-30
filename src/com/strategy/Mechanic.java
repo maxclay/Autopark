@@ -3,8 +3,6 @@ package com.strategy;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.util.ArrayList;
-
-import com.decorator.Employee;
 import com.main.Game;
 import com.main.resource.Resource;
 import com.panels.GaragePanel;
@@ -12,7 +10,7 @@ import com.panels.RepairPanel;
 import com.prototype.SpareCache;
 import com.prototype.SparesPrototype;
 
-public class Mechanic extends Employee{
+public class Mechanic {
 	
 	private UsedCarStrategy broken_car;
 	private ArrayList<SparesPrototype> spares;
@@ -25,6 +23,9 @@ public class Mechanic extends Employee{
 	
 	private boolean repair;
 	private Game game;
+	
+	private String name;
+	private float salary;
 	
 	public Mechanic() {
 		
@@ -41,14 +42,12 @@ public class Mechanic extends Employee{
 		last_time = System.currentTimeMillis();
 	}
 	
-	@Override
 	public void render(Graphics g) {
 
 		g.drawImage(sprites[current_sprite], 680, 175, null);
 		
 	}
 
-	@Override
 	public void update() {
 		
 //		System.out.println("Mechanic update!");
@@ -98,7 +97,6 @@ public class Mechanic extends Employee{
 		return repair_beginning;
 	}
 
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -146,6 +144,10 @@ public class Mechanic extends Employee{
 		
 		return broken_car.getPercentScale();
 		
+	}
+
+	public float getSalary() {
+		return salary;
 	}
 
 }

@@ -2,46 +2,21 @@ package com.decorator;
 
 import java.awt.Graphics;
 import java.awt.Image;
-
 import com.abstractfactory.Vehicle;
 
-public abstract class Seller extends Employee{
+public interface Seller {
 	
-	protected int skill;
-	protected Image img;
-	
-	protected float money;
-	
-	public Seller() {
-		money = 0;
-	}
-	
-	@Override
-	public void render(Graphics g) {
-
-		g.drawImage(img, 620, 75, null);
-		
-	}
-
-	@Override
-	public void update() {
-
-	}
-
-	@Override
-	public String getName() {
-		return name;
-	}
-	
-	public float getMoney() {
-		return money;
-	}
-	
-	public void setMoney(float mn) {
-		money = mn;
-	}
-	
+	public void setImage(Image img);
+	public Image getImage();
+	public void setSkill(int skill);
+	public float getMoney();
+	public void setMoney(float mn);
+	public void setName(String name);
+	public String getName();
+	public float getSalary();
+	public void setSalary(float salary);
+	public void update();
 	public abstract void setCarForSale(Vehicle car);
-	
+	public void render(Graphics g);
 
 }
