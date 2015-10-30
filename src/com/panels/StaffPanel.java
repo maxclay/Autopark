@@ -126,6 +126,7 @@ public class StaffPanel extends Panel implements ActionListener{
 			
 			ExpertSeller expert_seller = new ExpertSeller();
 			expert_seller.toTeach(game.getSeller());
+			expert_seller.init();
 			game.setSeller(expert_seller);
 			
 			
@@ -143,6 +144,7 @@ public class StaffPanel extends Panel implements ActionListener{
 			
 			ProSeller pro_seller = new ProSeller();
 			pro_seller.toTeach(game.getSeller());
+			pro_seller.init();
 			game.setSeller(pro_seller);
 			
 			buttons.get("second_seller_teach").setEnabled(false);

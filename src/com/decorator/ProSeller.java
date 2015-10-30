@@ -6,12 +6,12 @@ import com.main.resource.Resource;
 
 public class ProSeller extends SellerDecorator {
 	
-	public ProSeller() {
+	public void init() {
 		
-		img = Resource.getImage("seller3");
-		skill = 20;
-		name = "pro seller";
-		salary = 1000;
+		seller.img = Resource.getImage("seller3");
+		seller.skill = 20;
+		seller.name = "pro seller";
+		seller.salary = 1000;
 	}
 
 	@Override

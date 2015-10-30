@@ -5,12 +5,12 @@ import com.main.resource.Resource;
 
 public class ExpertSeller extends SellerDecorator {
 	
-	public ExpertSeller() {
+	public void init() {
 		
-		img = Resource.getImage("seller2");
-		skill = 10;
-		name = "expert seller";
-		salary = 700;
+		seller.img = Resource.getImage("seller2");
+		seller.skill = 10;
+		seller.name = "expert seller";
+		seller.salary = 700;
 		
 	}
 
